@@ -1,0 +1,23 @@
+api:
+  insecure: true
+  dashboard: true
+  debug: true
+
+log:
+  level: DEBUG
+
+entryPoints:
+  http:
+    address: :80
+
+  https:
+    address: :443
+
+providers:
+  docker:
+    exposedByDefault: false
+    endpoint: unix:///var/run/docker.sock
+  file:
+    filename: /etc/traefik/certificates.yaml
+    watch: true
+
