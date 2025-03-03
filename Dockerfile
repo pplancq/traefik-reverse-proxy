@@ -1,4 +1,4 @@
-FROM traefik:v3.3.3
+FROM traefik:v3.3.4
 
 ## Installation des packages persistants
 RUN apk add --no-cache nss-tools
